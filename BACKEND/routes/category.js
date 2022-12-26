@@ -15,12 +15,11 @@ router.post('/category/create', (req, res) =>{
     }
 
     const cate = new Category(categoryObj);
-    cate.save((error, category) => {
-        if(error) return res.status(400).json({error});
-        if(category){
-            return res.status(201).json({ category});
-        }
-    });
-});
+    cate.save().then(() => {
+        res.json("Category Added")
+        }).catch((err)=>{
+            console.log(err);
+        })
+})
 
 module.exports = router;
