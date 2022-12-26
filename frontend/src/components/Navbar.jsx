@@ -1,4 +1,4 @@
-import { faArrowRightToBracket, faHeart, faShoppingBag } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRightToBracket, faHeart, faShoppingBag, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import '../styles/navbar.css'
@@ -11,6 +11,7 @@ const Navbar = () => {
             <div className="n-row">
                 <div className="n-col">
                     <span className='n-email'>dakshinda.r94@gmail.com</span>
+                    <span><FontAwesomeIcon icon={faUser} />Guest</span>
                 </div>
                 <div className="n-col">
                     <div className="socials">
